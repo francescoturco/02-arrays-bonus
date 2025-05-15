@@ -8,14 +8,13 @@ const teachers = [
   'Luca'
 ]; // NON MODIFICARE QUESTA VARIABILE
 
-console.log (teachers)
-
+console.log(teachers)
 
 
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
-const reversedTeachers = [...teachers].reverse();
+const reversedTeachers = teachers.toReversed();
 console.log(reversedTeachers)
 
 
@@ -29,8 +28,14 @@ console.log(longNames)
 
 
 // 3. Rimuovi 'Ed' dall'array teachers
-const removeName = teachers.filter(teacher => teacher.length > 2)
-console.log (removeName)
+const indexEd = teachers.indexOf('Ed')
+console.log(indexEd)
+if (indexEd !== -1) {
+  teachers.splice(indexEd, 1)
+}
+console.log(teachers)
+
+
 
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
